@@ -16,7 +16,7 @@ function echo_yellow()
 
 function echo_gateway_frequency()
 {
-    echo_yellow "Please select your gateway frequency:"
+    echo_yellow "Please select gateway frequency:"
     echo_yellow "*\t1.AS923"
     echo_yellow "*\t2.AU_915_928"
     echo_yellow "*\t3.CN_470_510"
@@ -25,7 +25,7 @@ function echo_gateway_frequency()
     echo_yellow "*\t6.KR_920_923"
     echo_yellow "*\t7.RU_864_870"
     echo_yellow "*\t8.US_902_928"
-    echo_yellow  "Please enter 1-8 to select the model:\c"
+    echo_yellow  "Please enter 1-8 to select gateway frequency:\c"
 }
 
 function echo_gateway_address()

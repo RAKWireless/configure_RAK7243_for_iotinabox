@@ -7,7 +7,7 @@ NETWORK="ttn"
 #gateway id
 CONFIG_FILE="/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd/local_conf.json"
 TAG_GW_MAC="gateway_ID"
-GATEWAY_ID=$( sed -n 's/.*"'$TAG_GW_MAC'": "\(.*\)" /\1/p' $CONFIG_FILE  )
+GATEWAY_ID=$( sed -n 's/.*"'$TAG_GW_MAC'": "\(.*\)"/\1/p' $CONFIG_FILE | sed -e 's/^[ ]*//g' | sed -e 's/[ ]*$//g' )
 
 # append eui in front of the gateway id
 GATEWAY_ID="eui-$GATEWAY_ID"
