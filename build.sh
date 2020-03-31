@@ -123,8 +123,7 @@ do
 	break
 done
 
-cp ./lora_online_rak.sh /usr/bin
-(crontab -l 2>/dev/null; echo "* * * * * /usr/bin/lora_online_rak.sh") | crontab -
+systemctl restart ttn-gateway
 
-systemctl start ttn-gateway
+cp ./lora_online_rak.sh /usr/bin
 
